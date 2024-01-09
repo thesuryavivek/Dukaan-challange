@@ -119,7 +119,7 @@ export default function Home() {
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr key={index} className="">
+              <tr key={index} className="border-b text-sm">
                 <td className="text-left p-2 text-[#146EB4] hover:underline cursor-pointer hover:underline-offset-4">
                   #{item.orderId}
                 </td>
