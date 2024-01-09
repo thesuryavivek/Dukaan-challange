@@ -19,7 +19,7 @@ import WalletIcon from "./icons/Wallet";
 
 const Nav = () => {
   return (
-    <nav className="bg-[#1E2640] min-h-screen w-fit p-4 text-zinc-100 flex flex-col justify-between">
+    <nav className="bg-[#1E2640] fixed h-screen w-fit p-4 text-zinc-100 flex flex-col justify-between">
       <div>
         <div className="flex items-center justify-between space-x-8">
           <div className="flex space-x-2">

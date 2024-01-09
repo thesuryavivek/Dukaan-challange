@@ -16,6 +16,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { ArrowDownUp, Download, Info, Search } from "lucide-react";
 
 export default function Home() {
@@ -26,7 +32,7 @@ export default function Home() {
     fees: 22,
   };
 
-  const data = Array.from({ length: 20 }, () => sampleData);
+  const data = Array.from({ length: 10 }, () => sampleData);
 
   return (
     <div className="p-8 text-[#1A181E] bg-[#FBFAFB] flex-1 space-y-5">
@@ -92,8 +98,20 @@ export default function Home() {
               <th className="font-medium py-2.5 px-3 text-right rounded-r text-sm">
                 <div className="flex justify-end items-center space-x-2">
                   <span>Transaction fees</span>
-                  <span>
-                    <Info size={14} />
+                  <span className="flex items-center">
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Info size={14} />
+                        </TooltipTrigger>
+                        <TooltipContent className="bg-[#4D4D4D] text-white max-w-64 text-left text-xs">
+                          <p>
+                            Transaction fees are charged as a percentage of the
+                            order amount according to your plan.
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </span>
                 </div>
               </th>
